@@ -1,0 +1,45 @@
+---
+title: "Machine Learning Analysis of Geologic & Engineering Data for Prediction of Shale Gas Production"
+author: "Randall Hunt"
+date: "6/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+  
+This project uses data on the average physical composition of Marcellus Shale rock in drilled horizontal wells, and hydraulic fracturing engineering parameters during the completion of those wells, to predict the productivity of future, undrilled wells.  The data comes from horizontal Marcellus Shale gas wells drilled by Range Resources, an oil/gas company headquartered in Ft Worth, Texas.
+
+## Problem Description
+  
+The productivity of horizontal wells drilled in order to produce natural gas, the primary fuel used in the United States for electricity generation, varies significantly.   Many geologic and engineering factors can affect the ultimate productivity of a given shale well.   Geologic factors vary geographically, while engineering practices can vary well-to-well, which makes finding meaningful correlations of productivity to geology/engineering very challenging.  This project will seek to find relationships of geologic/engineering data to production, and leverage that knowledge to predict the productivity of future, undrilled wells.   The ability to adequately predict the productivity of undrilled wells/areas will enhance the efficiency of capital expenditures by Range Resources, increasing the production/$ which can be achieved, while also facilitating better long-term planning of capital spend and future production.
+ 
+ 
+## Data
+  
+Data for the project is derived from nearly one thousand horizontal wells drilled into the Marcellus Shale by Range Resources, dating from 2009 to the present.  Relevant engineering and geologic data comes from several different sources: 
+  
+1. Direct well log measurements of specific physical rock/fluid properties from inside the horizontal boreholes, collected via sensors as they are moved up through the rocks.  These have been interpolated into a 3D reservoir model, painted onto the horizontal wellbores, and averaged along the wellbore.  
+  
+2. Other, specific vertical well log measurements which cannot be acquired inside the horizontal wells (due to technological limitations) .  These have been interpolated into a 3D reservoir model, painted onto the horizontal wellbores, and averaged along the wellbore.  These values will be less accurate than the horizontal values, since they have been interpolated only from vertical wells, which are more widely-spaced.
+  
+3. Geophysical attributes from 3D seismic data, interpolated and averaged over the horizontal wellbore length
+  
+4. Engineering data regarding the “completion” of each well comes from detailed records of the “frac” job, detailing aspects such as fluid pumping rate, sand concentration, breakdown pressure, and many other parameters.    
+  
+In all, the dataset contains forty-seven variables, fourteen of them related to engineering practices, with the rest being geologic or geophysical properties of the rock layers.  Two variables are production “targets”, ie the known productivity values of each well (row) in the dataset.  A link to the dataset can be seen [here](https://docs.google.com/spreadsheets/d/1biHbHBJGpNjN6WYAKbArQndmxHqxsokbz8jlUeK12CA/edit?usp=sharing):  
+ 
+## Analysis Approach
+  
+Data analysis and machine learning methods establishing relationships between independent and target variables (EUR/1000 and EUREQ/1000) will be used to generate a model that predicts the targets as accurately as possible.   More details on the specific methods will be added as I progress further into Springboard’s Intro to Data Science training.
+  
+## Deliverables
+  
+The primary deliverables are the code used to execute the analysis described above, which will use relationships established between the independent and target variables to predict future well performance.
+I will also deliver a paper and slide deck which will communicate the analysis process and the findings. The paper and slide deck will be targeted to Geoscience and Engineering management at Range Resources Corporation, to inform them of results, and hopefully share with them a new and useful method for predicting future gas production, thereby improving their production planning process.
+  
+All final deliverables, as well as intermediate deliverables, will be made available on the project's [GitHub Repository](https://github.com/rlhunt64/Capstone_Proj.git).
+
